@@ -1,14 +1,16 @@
 # from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django.forms import CharField, IntegerField
 
 
 class User(AbstractUser):
-    # is_student = models.BooleanField('student status', default=False)
-    # BMI
-    # age
-    # weight
-    # score
-    # log-in streak
+    username = CharField(max_lengh=20)
+    bmi = IntegerField()
+    age = IntegerField()
+    weight = IntegerField()
+    height = IntegerField()
+    waist = IntegerField()
+    
 
     pass
     '''
