@@ -5,7 +5,8 @@ from authentication.models import User
 
 class Goal(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=50)
+    goalname = models.CharField(max_length=50)
+    notes = models.CharField(max_length=100)
     ounce_goal = models.IntegerField()
     due_date = models.IntegerField()
     completed = models.BooleanField()

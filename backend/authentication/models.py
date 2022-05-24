@@ -4,7 +4,7 @@ from django.forms import CharField, IntegerField
 
 
 class User(AbstractUser):
-    username = CharField(max_lengh=20)
+    name = CharField(max_length=20)
     bmi = IntegerField()
     age = IntegerField()
     weight = IntegerField()
