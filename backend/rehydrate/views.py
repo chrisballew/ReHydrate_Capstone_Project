@@ -11,13 +11,6 @@ from .serializers import ProgressSerializer
 from authentication.models import User
 
 
-@api_view(['GET'])
-@permission_classes([AllowAny])
-def get_goals(request):
-    goals = Goal.objects.all()
-    serializer = GoalSerializer(goals, many=True)
-    return Response(serializer.data)
-
 @api_view(['POST', 'GET'])
 @permission_classes([IsAuthenticated])
 def user_goals(request):
