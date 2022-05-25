@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "cdfd2833-0089-4c25-a761-368eedddd03c",
+		"name": "ReHydrate_Capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20283162"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register_User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"cballew\",\r\n    \"password\": \"Password_55\",\r\n    \"email\": \"bluman325@gmail.com\",\r\n    \"first_name\": \"Chris\",\r\n    \"last_name\": \"Ballew\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/register/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login_User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"\"\r\n    \"password\": \"\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Goals",
+			"item": [
+				{
+					"name": "Create_Goal",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Goals_for_user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU0Mjg3NjIxLCJpYXQiOjE2NTM0MjM2MjEsImp0aSI6IjFmYTJmNzUzMDA1ODRhMzJhZjI4ZTJmYjc0ODE0NmY1IiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJjYmFsbGV3IiwiZmlyc3RfbmFtZSI6IkNocmlzIn0.YsR-FvpHjxIAd08biaW6WfUtqu_LxoExNCM3OzziK40",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/rehydrate/newgoal",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"rehydrate",
+								"newgoal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
