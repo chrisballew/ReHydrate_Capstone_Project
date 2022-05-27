@@ -1,17 +1,16 @@
 # from django.db import models
 from django.contrib.auth.models import AbstractUser
-from django.forms import CharField, IntegerField
+from django.db import models
 
 
 class User(AbstractUser):
-    name = CharField(max_length=20)
-    bmi = IntegerField()
-    age = IntegerField()
-    weight = IntegerField()
-    height = IntegerField()
-    
+    bmi = models.IntegerField(null=True, default=0)
+    age = models.IntegerField(null=True, default=0)
+    weight = models.IntegerField(null=True, default=0)
+    height = models.IntegerField(null=True, default=0)
+    waterintake = models.IntegerField(null=True, default=0)
 
-    pass
+   
     '''
     This is a custom version of the built in User class
     It contains all of the built in fields and functionality of the standard User

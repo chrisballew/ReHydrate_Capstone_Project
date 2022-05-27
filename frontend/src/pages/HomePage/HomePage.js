@@ -12,6 +12,7 @@ const HomePage = () => {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
+    console.log('User: ', user)
     const fetchCars = async () => {
       try {
         let response = await axios.get("http://127.0.0.1:8000/api/cars/", {
@@ -29,12 +30,8 @@ const HomePage = () => {
   return (
     <div className="container">
       <h1>Home Page for {user.username}!</h1>
-      {cars &&
-        cars.map((car) => (
-          <p key={car.id}>
-            {car.year} {car.model} {car.make}
-          </p>
-        ))}
+      <h1>Name: {user.first_name}</h1>
+      <h1>age: {user.age}</h1>
     </div>
   );
 };

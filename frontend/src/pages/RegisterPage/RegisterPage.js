@@ -10,6 +10,10 @@ const RegisterPage = () => {
     password: "",
     firstName: "",
     lastName: "",
+    weight:0,
+    height:0,
+    age:0,
+    bmi:0,
   };
   const [formData, handleInputChange, handleSubmit] = useCustomForm(
     defaultValues,
@@ -52,6 +56,33 @@ const RegisterPage = () => {
             type="text"
             name="email"
             value={formData.email}
+            onChange={handleInputChange}
+          />
+        </label>
+        <label>
+          Weight (In Pounds):{" "}
+          <input
+            type="number"
+            name="weight"
+            value={formData.weight}
+            onChange={handleInputChange}
+          />
+        </label>
+        <label>
+          Height:{" "}
+          <input
+            type="number"
+            name="height"
+            value={formData.height}
+            onChange={handleInputChange}
+          />
+        </label>
+        <label>
+          Age:{" "}
+          <input
+            type="number"
+            name="age"
+            value={formData.age}
             onChange={handleInputChange}
           />
         </label>

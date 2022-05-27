@@ -15,6 +15,11 @@ function setUserObject(user) {
     username: user.username,
     id: user.user_id,
     first_name: user.first_name,
+    height: user.height,
+    weight: user.weight,
+    age: user.age,
+    bmi: user.bmi,
+    waterintake: user.waterintake,
   };
 }
 
@@ -28,6 +33,10 @@ export const AuthProvider = ({ children }) => {
   const navigate = useNavigate();
 
   const registerUser = async (registerData) => {
+    let bmi = ((registerData.weight * 703)/(registerData.height * registerData.height))
+    let waterintake = (registerData.weight * 0.67)
+    
+    
     try {
       let finalData = {
         username: registerData.username,
@@ -35,6 +44,11 @@ export const AuthProvider = ({ children }) => {
         email: registerData.email,
         first_name: registerData.firstName,
         last_name: registerData.lastName,
+        weight: parseInt(registerData.weight),
+        height: parseInt(registerData.height),
+        age: parseInt(registerData.age),
+        bmi:parseInt(bmi),
+        waterintake:parseInt(waterintake)
       };
       let response = await axios.post(`${BASE_URL}/register/`, finalData);
       if (response.status === 201) {
