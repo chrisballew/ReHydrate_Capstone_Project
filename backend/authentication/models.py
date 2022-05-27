@@ -9,7 +9,6 @@ class User(AbstractUser):
     age = IntegerField()
     weight = IntegerField()
     height = IntegerField()
-    waist = IntegerField()
     
 
     pass
