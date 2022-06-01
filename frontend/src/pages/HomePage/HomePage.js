@@ -29,9 +29,12 @@ const HomePage = () => {
   }, [token]);
   return (
     <div className="container">
-      <h1>Home Page for {user.username}!</h1>
-      <h1>Name: {user.first_name}</h1>
-      <h1>age: {user.age}</h1>
+      <h1>Welcome, {user.first_name}!</h1>
+      <h3>Age: {user.age}</h3>
+      <h3>Height: {user.height}</h3>
+      <h3>Weight: {user.weight}</h3>
+      <h3>BMI: {user.bmi}</h3>
+      <h2>You need approx. {user.waterintake} ounces of water per day to stay healthy and hydrated!</h2>
     </div>
   );
 };

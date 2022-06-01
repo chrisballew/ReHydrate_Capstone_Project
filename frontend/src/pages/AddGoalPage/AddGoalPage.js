@@ -21,25 +21,26 @@ const AddGoalPage = () => {
                  name="goalname"
                  value={formData.goalname}
                  onChange={handleInputChange}/>
-            </form>
+
             <label>
             Add notes here: {" "}
+            </label>
           <input
             type="text"
             name="notes"
             value={formData.notes}
-            onChange={handleInputChange}
-          />
-        </label>
+            onChange={handleInputChange}/>
+        
         <label>
           Ounce Goal:{" "}
+          </label>
           <input
             type="text"
             name="ouncegoal"
             value={formData.ounce_goal}
-            onChange={handleInputChange}
-          />
-        </label>
+            onChange={handleInputChange}/>
+            
+          </form>
         </div>
             
     )
