@@ -10,9 +10,9 @@ const AddGoalPage = () => {
 
 
     return (
-        <div className="container">
+        <div>
             <h1>Setting goals is the key to success! You can start a new one here!</h1>
-            <form className="form" onSubmit={handleSubmit}>
+            <form className="goalform" onSubmit={handleSubmit}>
                 <label> 
                 What do you want to call this goal: {" "}
                 </label>
