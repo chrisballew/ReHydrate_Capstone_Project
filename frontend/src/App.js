@@ -33,8 +33,8 @@ function App() {
         />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/addgoal" element={<AddGoalPage />} />
-        <Route path="/goals" element={<GoalsPage />} />
+        <Route path="/addgoal" element={<PrivateRoute><AddGoalPage /></PrivateRoute>} />
+        <Route path="/goals" element={<PrivateRoute><GoalsPage /></PrivateRoute>} />
       </Routes>
       <Footer />
     </div>

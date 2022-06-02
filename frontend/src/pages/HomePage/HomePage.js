@@ -27,6 +27,7 @@ const HomePage = () => {
     };
     fetchCars();
   }, [token]);
+  
   return (
     <div className="container">
       <h1>Welcome, {user.first_name}!</h1>
@@ -38,5 +39,15 @@ const HomePage = () => {
     </div>
   );
 };
+
+{/* <div className="container">
+<h1>Home Page for {user.username}!</h1>
+{cars &&
+  cars.map((car) => (
+    <p key={car.id}>
+      {car.year} {car.model} {car.make}
+    </p>
+  ))}
+</div> */}
 
 export default HomePage;

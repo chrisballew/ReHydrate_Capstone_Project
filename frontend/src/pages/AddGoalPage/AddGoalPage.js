@@ -1,12 +1,36 @@
+import axios from "axios"
 import React from "react"
 import { useNavigate } from "react-router-dom"
 
 import useAuth from "../../hooks/useAuth"
 import useCustomForm from "../../hooks/useCustomForm"
 
+let initialValues = {
+  goalname: "",
+  notes: "",
+  ounce_goal: "",
+  due_date: "",
+};
+
 
 const AddGoalPage = () => {
-    const [user, token] =  useAuth()
+    const [user, token] =  useAuth();
+    const [formData, handleInputChange, handleSubmit] =useCustomForm(initialValues, postNewGoal)
+    const navigate = useNavigate()
+
+    async function postNewGoal(){
+      try {
+          let response = await axios.post("http://127.0.0.1:8000/api/rehydrate/newgoal", formData, {
+            headers: {
+              Authorization: 'Bearer ' + token
+            }
+          })
+          navigate("/")
+      } catch (error) {
+        console.log(error.message)
+
+      }
+    }
 
 
     return (
@@ -36,10 +60,20 @@ const AddGoalPage = () => {
           </label>
           <input
             type="text"
-            name="ouncegoal"
+            name="ounce_goal"
             value={formData.ounce_goal}
             onChange={handleInputChange}/>
             
+            <label>
+          Due Date:{" "}
+          </label>
+          <input
+            type="date"
+            name="due_date"
+            value={formData.due_date}
+            onChange={handleInputChange}/>
+            
+            <button>Add!</button>
           </form>
         </div>
             
