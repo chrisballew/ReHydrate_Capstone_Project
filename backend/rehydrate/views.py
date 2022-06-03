@@ -1,3 +1,4 @@
+from functools import partial
 from urllib import response
 from rest_framework import status
 from rest_framework.views import APIView
@@ -27,3 +28,14 @@ def user_goals(request):
         goals = Goal.objects.filter(user_id=request.user.id)
         serializer = GoalSerializer(goals, many=True)
         return Response(serializer.data)
+
+
+@api_view(['PATCH'])
+@permission_classes([IsAuthenticated])
+def completed_goals(request, id):
+   
+    goals = Goal.objects.get(pk=id)
+    serializer = GoalSerializer(goals,data=request.data, partial=True)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)

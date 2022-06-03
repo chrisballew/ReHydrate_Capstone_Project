@@ -36,6 +36,7 @@ const HomePage = () => {
       <h3>Weight: {user.weight}</h3>
       <h3>BMI: {user.bmi}</h3>
       <h2>You need approx. {user.waterintake} ounces of water per day to stay healthy and hydrated!</h2>
+      <h1></h1>
     </div>
   );
 };
