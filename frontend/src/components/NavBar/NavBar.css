@@ -9,6 +9,11 @@ li {
   font-size: 1.25rem;
 }
 
+b {
+  color: black;
+  
+}
+
 .navBar {
   background: rgb(113, 191, 255);
   box-shadow: 4px 2px 5px gray;
@@ -19,8 +24,8 @@ li {
 
 .navBar button {
   background: transparent;
-  border: 2px solid rgb(255, 255, 255);
-  color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   padding: 0.4rem 0.5rem;
 }
 
