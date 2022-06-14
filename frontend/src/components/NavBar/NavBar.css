@@ -2,6 +2,7 @@ ul {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+  
 }
 
 li {
@@ -9,22 +10,22 @@ li {
 }
 
 .navBar {
-  background: steelblue;
+  background: rgb(113, 191, 255);
   box-shadow: 4px 2px 5px gray;
-  color: white;
+  color: rgb(132, 175, 255);
   margin-bottom: 2rem;
   padding: 1.5rem 2rem;
 }
 
 .navBar button {
   background: transparent;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   padding: 0.4rem 0.5rem;
 }
 
 .navBar button:hover {
-  background: white;
+  background: rgb(0, 238, 255);
   color: steelblue;
   cursor: pointer;
 }
