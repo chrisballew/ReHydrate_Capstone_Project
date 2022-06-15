@@ -9,7 +9,6 @@ class User(AbstractUser):
     weight = models.IntegerField(null=True, default=0)
     height = models.IntegerField(null=True, default=0)
     waterintake = models.IntegerField(null=True, default=0)
-    score = models.IntegerField(null=True, default=0)
 
    
     '''
