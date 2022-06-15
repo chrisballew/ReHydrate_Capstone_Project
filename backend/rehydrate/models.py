@@ -11,9 +11,3 @@ class Goal(models.Model):
     ounce_goal = models.IntegerField()
     due_date = models.DateField()
     completed = models.BooleanField(default=False)
-
-class Progress(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    hydration_streak = models.IntegerField()
-    goals_met =models.IntegerField()
-    #level = models.IntegerField()

@@ -1,6 +1,7 @@
 import axios from "axios"
 import React from "react"
 import { useNavigate } from "react-router-dom"
+import "./AddGoalPage.css"
 
 import useAuth from "../../hooks/useAuth"
 import useCustomForm from "../../hooks/useCustomForm"
@@ -38,7 +39,7 @@ const AddGoalPage = () => {
             <h1>Setting goals is the key to success! You can start a new one here!</h1>
             <form className="goalform" onSubmit={handleSubmit}>
                 <label> 
-                What do you want to call this goal: {" "}
+                What do you want to call this goal? {" "}
                 </label>
                 <input
                  type="text"
@@ -47,7 +48,7 @@ const AddGoalPage = () => {
                  onChange={handleInputChange}/>
 
             <label>
-            Add notes here: {" "}
+            Notes: {" "}
             </label>
           <input
             type="text"
@@ -56,7 +57,7 @@ const AddGoalPage = () => {
             onChange={handleInputChange}/>
         
         <label>
-          Ounce Goal:{" "}
+          How many ounces are you aiming for? {" "}
           </label>
           <input
             type="text"

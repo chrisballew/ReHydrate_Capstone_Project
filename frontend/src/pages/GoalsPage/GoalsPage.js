@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import useAuth from "../../hooks/useAuth"
 import axios from "axios"
+import "./GoalsPage.css"
 
 const GoalsPage = () => {
     const [user, token] = useAuth();
@@ -47,7 +48,7 @@ const GoalsPage = () => {
                     goals.map((goal) => (
                         <body>
                             <p key={goal.id}>
-                                Name: {goal.goalname} Notes: {goal.notes} Ounces: {goal.ounce_goal} Due: {goal.due_date} {goal.completed}
+                                Name: {goal.goalname} Notes: {goal.notes} Ounces: {goal.ounce_goal} Due: {goal.due_date} {goal.completed} 
                             </p>
                             <label className="checkbox" for="myCheckboxId">
                                 Completed?
